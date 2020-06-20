@@ -387,7 +387,7 @@ function forEachWindow(callback) {
 
 function changeTitleBar(win) {
 	if (ignoreWindow(win)) return;
-	if (win.get_maximized()) {
+	if (win.get_maximized() == Meta.MaximizeFlags.BOTH) {
 		LOG('Hiding titlebar');
 		hideTitlebar(win);
 	} else {
